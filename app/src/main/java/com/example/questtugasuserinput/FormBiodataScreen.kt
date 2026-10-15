@@ -62,3 +62,5 @@ fun FormBiodataApp() {
     var textEmail by remember { mutableStateOf("") }
     var textTglLahir by remember { mutableStateOf("") }
     var textExperience by remember { mutableStateOf("") }
+    var isClicked by remember { mutableStateOf(false) }
+
