@@ -131,4 +131,23 @@ fun FormBiodataApp() {
                     )
                     .padding(dimensionResource(id = R.dimen.padding_large))
             ) {
-               
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.form_title),
+                        fontSize = dimensionResource(id = R.dimen.font_title).value.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = colorResource(id = R.color.purple_title)
+                    )
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_small)))
+
+                    Text(
+                        text = stringResource(id = R.string.form_subtitle),
+                        fontSize = dimensionResource(id = R.dimen.font_subtitle).value.sp,
+                        color = colorResource(id = R.color.gray_subtitle)
+                    )
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_large)))
+
+                   
