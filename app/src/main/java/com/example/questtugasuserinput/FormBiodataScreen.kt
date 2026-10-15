@@ -180,3 +180,31 @@ fun FormBiodataApp() {
                     )
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_small)))
 
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_small))
+                    ) {
+                        Box(modifier = Modifier.weight(1f)) {
+                            OutlinedTextField(
+                                value = textTglLahir,
+                                onValueChange = {},
+                                readOnly = true,
+                                label = { Text(stringResource(id = R.string.label_tgl_lahir)) },
+                                trailingIcon = {
+                                    Icon(
+                                        painter = painterResource(id = android.R.drawable.ic_menu_my_calendar),
+                                        contentDescription = stringResource(id = R.string.cd_calendar)
+                                    )
+                                },
+                                modifier = Modifier.fillMaxWidth(),
+                                shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_button))
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .matchParentSize()
+                                    .clickable { showDatePicker = true }
+                            )
+                        }
+
+
+                        }
