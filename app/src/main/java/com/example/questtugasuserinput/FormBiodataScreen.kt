@@ -105,3 +105,17 @@ fun FormBiodataApp() {
         }
     }
 
+    Scaffold(
+        snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
+    ) { innerPadding ->
+        Box(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
+            Image(
+                painter = painterResource(id = R.drawable.kalimantan),
+                contentDescription = stringResource(id = R.string.cd_background),
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight(fraction = 0.4f)
+            )
+
+           
