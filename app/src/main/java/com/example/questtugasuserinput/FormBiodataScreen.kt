@@ -150,4 +150,8 @@ fun FormBiodataApp() {
                     )
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_large)))
 
-                   
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_small))
+                    ) {
+                        
