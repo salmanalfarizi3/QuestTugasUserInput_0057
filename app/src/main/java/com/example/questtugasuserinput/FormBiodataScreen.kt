@@ -161,4 +161,13 @@ fun FormBiodataApp() {
                             modifier = Modifier.weight(1f),
                             shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_button))
                         )
-                        
+                        OutlinedTextField(
+                            value = textNamaBelakang,
+                            onValueChange = { textNamaBelakang = it },
+                            label = { Text(stringResource(id = R.string.label_nama_belakang)) },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_button))
+                        )
+                    }
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_small)))
+
