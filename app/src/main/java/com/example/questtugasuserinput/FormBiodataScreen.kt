@@ -74,3 +74,10 @@ fun FormBiodataApp() {
     var showDatePicker by remember { mutableStateOf(false) }
     val datePickerState = rememberDatePickerState()
 
+    val experienceOptions = listOf(
+        stringResource(id = R.string.exp_beginner),
+        stringResource(id = R.string.exp_intermediate),
+        stringResource(id = R.string.exp_expert)
+    )
+
+
