@@ -207,4 +207,40 @@ fun FormBiodataApp() {
                         }
 
 
+                        ExposedDropdownMenuBox(
+                            expanded = expandedExperience,
+                            onExpandedChange = { expandedExperience = it },
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            OutlinedTextField(
+                                value = textExperience,
+                                onValueChange = {},
+                                readOnly = true,
+                                label = { Text(stringResource(id = R.string.label_experience)) },
+                                trailingIcon = {
+                                    ExposedDropdownMenuDefaults.TrailingIcon(expanded = expandedExperience)
+                                },
+                                modifier = Modifier
+                                    .menuAnchor()
+                                    .fillMaxWidth(),
+                                shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_button))
+                            )
+
+                            ExposedDropdownMenu(
+                                expanded = expandedExperience,
+                                onDismissRequest = { expandedExperience = false }
+                            ) {
+                                experienceOptions.forEach { selectionOption ->
+                                    DropdownMenuItem(
+                                        text = { Text(selectionOption) },
+                                        onClick = {
+                                            textExperience = selectionOption
+                                            expandedExperience = false
+                                        }
+                                    )
+                                }
+                            }
                         }
+                    }
+
+                   
