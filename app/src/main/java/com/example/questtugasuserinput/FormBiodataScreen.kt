@@ -154,4 +154,11 @@ fun FormBiodataApp() {
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_small))
                     ) {
+                        OutlinedTextField(
+                            value = textNamaDepan,
+                            onValueChange = { textNamaDepan = it },
+                            label = { Text(stringResource(id = R.string.label_nama_depan)) },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_button))
+                        )
                         
