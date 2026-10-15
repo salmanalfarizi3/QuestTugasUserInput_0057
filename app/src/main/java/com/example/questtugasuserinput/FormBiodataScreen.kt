@@ -118,4 +118,17 @@ fun FormBiodataApp() {
                     .fillMaxHeight(fraction = 0.4f)
             )
 
-           
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = dimensionResource(id = R.dimen.box_top_margin))
+                    .background(
+                        color = colorResource(id = R.color.white_background),
+                        shape = RoundedCornerShape(
+                            topStart = dimensionResource(id = R.dimen.corner_radius_box),
+                            topEnd = dimensionResource(id = R.dimen.corner_radius_box)
+                        )
+                    )
+                    .padding(dimensionResource(id = R.dimen.padding_large))
+            ) {
+               
