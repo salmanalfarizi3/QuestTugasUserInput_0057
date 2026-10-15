@@ -59,4 +59,4 @@ fun FormBiodataApp() {
     val coroutineScope = rememberCoroutineScope()
     var textNamaDepan by remember { mutableStateOf("") }
     var textNamaBelakang by remember { mutableStateOf("") }
-    }
+    var textEmail by remember { mutableStateOf("") }
