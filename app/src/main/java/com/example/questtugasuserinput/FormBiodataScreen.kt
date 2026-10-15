@@ -64,3 +64,13 @@ fun FormBiodataApp() {
     var textExperience by remember { mutableStateOf("") }
     var isClicked by remember { mutableStateOf(false) }
 
+    var checkAndroid by remember { mutableStateOf(false) }
+    var checkUiUx by remember { mutableStateOf(false) }
+    var checkWeb by remember { mutableStateOf(false) }
+
+    var expandedExperience by remember { mutableStateOf(false) }
+
+
+    var showDatePicker by remember { mutableStateOf(false) }
+    val datePickerState = rememberDatePickerState()
+
