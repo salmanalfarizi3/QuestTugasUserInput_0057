@@ -272,3 +272,45 @@ fun FormBiodataApp() {
                     }
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_large)))
 
+                    Button(
+                        onClick = {
+                            isClicked = true
+
+                            val skill1 = if (checkAndroid) "Android " else ""
+                            val skill2 = if (checkUiUx) "UI/UX " else ""
+                            val skill3 = if (checkWeb) "Web" else ""
+                            val skillFinal = if (skill1.isNotBlank() || skill2.isNotBlank() || skill3.isNotBlank()) "$skill1$skill2$skill3".trim() else "-"
+
+                            val hasilSubmit = "Nama: $textNamaDepan $textNamaBelakang\nEmail: $textEmail\nTgl Lahir: $textTglLahir\nPengalaman: $textExperience\nSkill: $skillFinal"
+
+                            coroutineScope.launch {
+                                snackbarHostState.showSnackbar(
+                                    message = hasilSubmit,
+                                    duration = SnackbarDuration.Long
+                                )
+                            }
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(dimensionResource(id = R.dimen.button_height)),
+                        shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_button)),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = if (isClicked) {
+                                colorResource(id = R.color.blue_button)
+                            } else {
+                                colorResource(id = R.color.gray_button)
+                            }
+                        )
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.btn_proceed),
+                            color = colorResource(id = R.color.white_text),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = dimensionResource(id = R.dimen.font_body).value.sp
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
